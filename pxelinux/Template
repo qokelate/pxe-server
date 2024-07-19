@@ -1,0 +1,17 @@
+timeout 600
+default /pxelinux/vesamenu.c32
+  
+label BootDisk
+menu label Boot From Local Drive
+localboot 0xffff
+
+LABEL InsXEN
+menu label XenServer Install
+KERNEL /Images/Other/xen/mboot.c32
+APPEND /Images/Other/xen/xen.gz dom0_max_vcpus=1-2 dom0_mem=max:752M com1=115200,8n1 console=com1,vga --- /Images/Other/xen/vmlinuz xencons=hvc console=hvc0 console=tty0 device_mapper_multipath=enabled --- /Images/Other/xen/install.img
+
+LABEL InsESXI
+MENU LABEL ESXi 5.1 Install
+KERNEL /Images/Other/esxi/mboot.c32
+APPEND -c /Images/Other/esxi/boot.cfg
+

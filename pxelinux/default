@@ -1,0 +1,65 @@
+timeout 600
+default /pxelinux/vesamenu.c32
+  
+label BootDisk
+menu label Boot From Local Drive
+localboot 0xffff
+
+LABEL InsXEN
+menu label XenServer Install
+KERNEL /Images/Other/xen/mboot.c32
+APPEND /Images/Other/xen/xen.gz dom0_max_vcpus=1-2 dom0_mem=max:752M com1=115200,8n1 console=com1,vga --- /Images/Other/xen/vmlinuz xencons=hvc console=hvc0 console=tty0 device_mapper_multipath=enabled --- /Images/Other/xen/install.img
+
+LABEL InsESXI
+MENU LABEL ESXi 5.1 Install
+KERNEL /Images/Other/esxi/mboot.c32
+APPEND -c /Images/Other/esxi/boot.cfg
+
+label 0PEv1.2.6(2011-05-02).ISO
+menu label Boot CD --> 0PEv1.2.6(2011-05-02).ISO
+linux /Pxelinux/memdisk
+initrd /Images/ISO/0PEv1.2.6(2011-05-02).ISO
+append iso raw
+
+label gparted-live-0.13.1-2.iso
+menu label Boot CD --> gparted-live-0.13.1-2.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/gparted-live-0.13.1-2.iso
+append iso raw
+
+label MemTest.iso
+menu label Boot CD --> MemTest.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/MemTest.iso
+append iso raw
+
+label ReactOS-0.3.16-REL-iso.iso
+menu label Boot CD --> ReactOS-0.3.16-REL-iso.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/ReactOS-0.3.16-REL-iso.iso
+append iso raw
+
+label routeros-5.20-p.iso
+menu label Boot CD --> routeros-5.20-p.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/routeros-5.20-p.iso
+append iso raw
+
+label Win8PE.iso
+menu label Boot CD --> Win8PE.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/Win8PE.iso
+append iso raw
+
+label XenServer-6.2.0-install-cd.iso
+menu label Boot CD --> XenServer-6.2.0-install-cd.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/XenServer-6.2.0-install-cd.iso
+append iso raw
+
+label xpud-0.9.5.iso
+menu label Boot CD --> xpud-0.9.5.iso
+linux /Pxelinux/memdisk
+initrd /Images/ISO/xpud-0.9.5.iso
+append iso raw
+

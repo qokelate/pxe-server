@@ -1,0 +1,624 @@
+default 2
+timeout 60
+pxe keep
+
+# 0
+title Grub Command Line
+commandline
+
+# 1
+title Reboot
+reboot
+
+# 2
+title Shutdown
+halt
+
+# 3
+title Boot XP/2003 PE
+chainloader --force (pd)/bootpe.pxe
+boot
+
+#4
+title Boot Win7 PE
+chainloader --force (pd)/bootwim.pxe
+boot
+
+#5
+title Boot Win7 RamOS
+map --mem --top (pd)/Images/Other/Uzhe-Win7x32.vhd (hd0)
+map (hd0) (hd1)
+map --hook
+root (hd0,0)
+chainloader /bootmgr
+boot
+
+title Boot Floppy --> ADDS.img
+find --set-root /Images/FDD/ADDS.img
+map --mem /Images/FDD/ADDS.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> BootNTLDR.IMG
+find --set-root /Images/FDD/BootNTLDR.IMG
+map --mem /Images/FDD/BootNTLDR.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> cd_DOS.img
+find --set-root /Images/FDD/cd_DOS.img
+map --mem /Images/FDD/cd_DOS.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DG401DOS.img
+find --set-root /Images/FDD/DG401DOS.img
+map --mem /Images/FDD/DG401DOS.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DISKFIX.img
+find --set-root /Images/FDD/DISKFIX.img
+map --mem /Images/FDD/DISKFIX.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DISKGEN3.IMG
+find --set-root /Images/FDD/DISKGEN3.IMG
+map --mem /Images/FDD/DISKGEN3.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DISKMAN.IMG
+find --set-root /Images/FDD/DISKMAN.IMG
+map --mem /Images/FDD/DISKMAN.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DISKTOOL.IMG
+find --set-root /Images/FDD/DISKTOOL.IMG
+map --mem /Images/FDD/DISKTOOL.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DM10.IMG
+find --set-root /Images/FDD/DM10.IMG
+map --mem /Images/FDD/DM10.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DM956.IMG
+find --set-root /Images/FDD/DM956.IMG
+map --mem /Images/FDD/DM956.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DOS98.IMG
+find --set-root /Images/FDD/DOS98.IMG
+map --mem /Images/FDD/DOS98.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DOSCN.IMG
+find --set-root /Images/FDD/DOSCN.IMG
+map --mem /Images/FDD/DOSCN.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DOSTOOL.IMG
+find --set-root /Images/FDD/DOSTOOL.IMG
+map --mem /Images/FDD/DOSTOOL.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> DOS_Ver6.22.IMG
+find --set-root /Images/FDD/DOS_Ver6.22.IMG
+map --mem /Images/FDD/DOS_Ver6.22.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> FBDISK.IMG
+find --set-root /Images/FDD/FBDISK.IMG
+map --mem /Images/FDD/FBDISK.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> FDD34.IMG
+find --set-root /Images/FDD/FDD34.IMG
+map --mem /Images/FDD/FDD34.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> ftool_200.img
+find --set-root /Images/FDD/ftool_200.img
+map --mem /Images/FDD/ftool_200.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> g3in1.img
+find --set-root /Images/FDD/g3in1.img
+map --mem /Images/FDD/g3in1.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> GDISK.IMG
+find --set-root /Images/FDD/GDISK.IMG
+map --mem /Images/FDD/GDISK.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> Ghost8.3.IMG
+find --set-root /Images/FDD/Ghost8.3.IMG
+map --mem /Images/FDD/Ghost8.3.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> HDDREG1.61.IMG
+find --set-root /Images/FDD/HDDREG1.61.IMG
+map --mem /Images/FDD/HDDREG1.61.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> HDR1.32.IMG
+find --set-root /Images/FDD/HDR1.32.IMG
+map --mem /Images/FDD/HDR1.32.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> konboot_v2.3.img
+find --set-root /Images/FDD/konboot_v2.3.img
+map --mem /Images/FDD/konboot_v2.3.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MaxDOS7.IMG
+find --set-root /Images/FDD/MaxDOS7.IMG
+map --mem /Images/FDD/MaxDOS7.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MAXDOS8.IMG
+find --set-root /Images/FDD/MAXDOS8.IMG
+map --mem /Images/FDD/MAXDOS8.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MaxDOS8p.img
+find --set-root /Images/FDD/MaxDOS8p.img
+map --mem /Images/FDD/MaxDOS8p.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MAXDOS9.img
+find --set-root /Images/FDD/MAXDOS9.img
+map --mem /Images/FDD/MAXDOS9.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MEMTEST.img
+find --set-root /Images/FDD/MEMTEST.img
+map --mem /Images/FDD/MEMTEST.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MEMTESTP.IMG
+find --set-root /Images/FDD/MEMTESTP.IMG
+map --mem /Images/FDD/MEMTESTP.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MSDOS622.IMG
+find --set-root /Images/FDD/MSDOS622.IMG
+map --mem /Images/FDD/MSDOS622.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MSDOS710.IMG
+find --set-root /Images/FDD/MSDOS710.IMG
+map --mem /Images/FDD/MSDOS710.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> NTFSDOS.img
+find --set-root /Images/FDD/NTFSDOS.img
+map --mem /Images/FDD/NTFSDOS.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> NTFSDOS5.IMG
+find --set-root /Images/FDD/NTFSDOS5.IMG
+map --mem /Images/FDD/NTFSDOS5.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> PMSERV11.IMG
+find --set-root /Images/FDD/PMSERV11.IMG
+map --mem /Images/FDD/PMSERV11.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> PQ.IMG
+find --set-root /Images/FDD/PQ.IMG
+map --mem /Images/FDD/PQ.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> PWDXP.IMG
+find --set-root /Images/FDD/PWDXP.IMG
+map --mem /Images/FDD/PWDXP.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> REMOVE.IMG
+find --set-root /Images/FDD/REMOVE.IMG
+map --mem /Images/FDD/REMOVE.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> SATA98.IMG
+find --set-root /Images/FDD/SATA98.IMG
+map --mem /Images/FDD/SATA98.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> SCSI.IMG
+find --set-root /Images/FDD/SCSI.IMG
+map --mem /Images/FDD/SCSI.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> THDD.IMG
+find --set-root /Images/FDD/THDD.IMG
+map --mem /Images/FDD/THDD.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> ULOCK.IMG
+find --set-root /Images/FDD/ULOCK.IMG
+map --mem /Images/FDD/ULOCK.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> USB.IMG
+find --set-root /Images/FDD/USB.IMG
+map --mem /Images/FDD/USB.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> USB30.IMG
+find --set-root /Images/FDD/USB30.IMG
+map --mem /Images/FDD/USB30.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> v6.0_rc11_128M.img
+find --set-root /Images/FDD/v6.0_rc11_128M.img
+map --mem /Images/FDD/v6.0_rc11_128M.img (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> WIN98.IMG
+find --set-root /Images/FDD/WIN98.IMG
+map --mem /Images/FDD/WIN98.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> WIN98SE.IMG
+find --set-root /Images/FDD/WIN98SE.IMG
+map --mem /Images/FDD/WIN98SE.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> XLY.IMG
+find --set-root /Images/FDD/XLY.IMG
+map --mem /Images/FDD/XLY.IMG (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> AMI-AFUDOS.ima
+find --set-root /Images/FDD/AMI-AFUDOS.ima
+map --mem /Images/FDD/AMI-AFUDOS.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> AMI-B30.ima
+find --set-root /Images/FDD/AMI-B30.ima
+map --mem /Images/FDD/AMI-B30.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> dos7.ima
+find --set-root /Images/FDD/dos7.ima
+map --mem /Images/FDD/dos7.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> Empty.ima
+find --set-root /Images/FDD/Empty.ima
+map --mem /Images/FDD/Empty.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> HDDL.ima
+find --set-root /Images/FDD/HDDL.ima
+map --mem /Images/FDD/HDDL.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> HDDSpeed.ima
+find --set-root /Images/FDD/HDDSpeed.ima
+map --mem /Images/FDD/HDDSpeed.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> LFormat.ima
+find --set-root /Images/FDD/LFormat.ima
+map --mem /Images/FDD/LFormat.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> LOADISO.IMA
+find --set-root /Images/FDD/LOADISO.IMA
+map --mem /Images/FDD/LOADISO.IMA (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> LowFormat.ima
+find --set-root /Images/FDD/LowFormat.ima
+map --mem /Images/FDD/LowFormat.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MaxDOS9.IMA
+find --set-root /Images/FDD/MaxDOS9.IMA
+map --mem /Images/FDD/MaxDOS9.IMA (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MHDD.ima
+find --set-root /Images/FDD/MHDD.ima
+map --mem /Images/FDD/MHDD.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> MSI-BIOS.ima
+find --set-root /Images/FDD/MSI-BIOS.ima
+map --mem /Images/FDD/MSI-BIOS.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> powermax.ima
+find --set-root /Images/FDD/powermax.ima
+map --mem /Images/FDD/powermax.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> PQ8.IMA
+find --set-root /Images/FDD/PQ8.IMA
+map --mem /Images/FDD/PQ8.IMA (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> pxeGhost.ima
+find --set-root /Images/FDD/pxeGhost.ima
+map --mem /Images/FDD/pxeGhost.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> RX780A12.ima
+find --set-root /Images/FDD/RX780A12.ima
+map --mem /Images/FDD/RX780A12.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> seagtdm.ima
+find --set-root /Images/FDD/seagtdm.ima
+map --mem /Images/FDD/seagtdm.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> SMAGIC.IMA
+find --set-root /Images/FDD/SMAGIC.IMA
+map --mem /Images/FDD/SMAGIC.IMA (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> Soyo-BIOS_Orgin.ima
+find --set-root /Images/FDD/Soyo-BIOS_Orgin.ima
+map --mem /Images/FDD/Soyo-BIOS_Orgin.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> Soyo-BIOS_PXE_Opt.ima
+find --set-root /Images/FDD/Soyo-BIOS_PXE_Opt.ima
+map --mem /Images/FDD/Soyo-BIOS_PXE_Opt.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot Floppy --> Victoria3.4.ima
+find --set-root /Images/FDD/Victoria3.4.ima
+map --mem /Images/FDD/Victoria3.4.ima (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+map --floppies=1
+
+title Boot GZIP --> ROS-Clear.gz
+find --set-root --ignore-floppies /Grldr/bzImage
+kernel /Grldr/bzImage quiet
+initrd /Images/GZip/ROS-Clear.gz
+
+title Ram Boot CD --> 0PEv1.2.6(2011-05-02).ISO
+map --mem /Images/ISO/0PEv1.2.6(2011-05-02).ISO (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> gparted-live-0.13.1-2.iso
+map --mem /Images/ISO/gparted-live-0.13.1-2.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> MemTest.iso
+map --mem /Images/ISO/MemTest.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> ReactOS-0.3.16-REL-iso.iso
+map --mem /Images/ISO/ReactOS-0.3.16-REL-iso.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> routeros-5.20-p.iso
+map --mem /Images/ISO/routeros-5.20-p.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> Win8PE.iso
+map --mem /Images/ISO/Win8PE.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> XenServer-6.2.0-install-cd.iso
+map --mem /Images/ISO/XenServer-6.2.0-install-cd.iso (0xff)
+map --hook
+chainloader (0xff)
+
+title Ram Boot CD --> xpud-0.9.5.iso
+map --mem /Images/ISO/xpud-0.9.5.iso (0xff)
+map --hook
+chainloader (0xff)
+

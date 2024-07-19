@@ -1,0 +1,26 @@
+default 2
+timeout 60
+pxe keep
+
+# 0
+title Grub Command Line
+commandline
+
+# 1
+title Reboot
+reboot
+
+# 2
+title Shutdown
+halt
+
+# 3
+title Boot XP/2003 PE
+chainloader --force (pd)/bootpe.pxe
+boot
+
+#4
+title Boot Win7 PE
+chainloader --force (pd)/bootwim.pxe
+boot
+

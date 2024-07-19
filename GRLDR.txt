@@ -1,0 +1,80 @@
+GRUB4DOS 命令索引:
+background 设置图形模式下的背景色。
+blocklist 输出文件的块清单标记。
+boot 引导已加载的操作系统或扇区链式加载器。
+calc 简单的计算器。
+call 批处理专用命令，跳转到指定标签执行，语法与MS-DOS中 call 语法几乎相同。
+cat 显示指定文件的内容。
+cdrom CDROM设备命令。
+chainloader 加载扇区链式加载器。
+checkrange 检查一条命令的返回值是否是在指定的值域或排列中。
+checktime 输出当前时间。
+clear 清屏幕。
+cmp 比较两个文件, 并且报告两者之间的不同的信息。
+color 改变菜单的颜色。
+command 声明外部命令位置。
+commandline 进入命令行模式。
+configfile 将指定文件作为配置文件予以加载。
+dd 复制文件。
+debug 打开/关闭除错模式。
+default 把 NUM 项菜单设为缺省值。
+delmod 删除已加载至内存的外部命令。
+displaymem 显示 GRUB 所判断到的当前系统的内存分布，包括所有物理内存区域。
+echo 输出指定内容。
+errnum 返回错误值。
+errorcheck 打开/关闭或显示错误检查模式。
+exit 批处理专用命令，中断批处理的执行，推出批处理，语法与MS-DOS中 call 语法几乎相同。
+fallback 如果调用当前的菜单项时出现错误，则转移到 NUM 项后重试。
+find 在所有分区上查找文件名, 并显示包含该文件的设备。
+fontfile 指定中文字体文件，并切换到简体中文显示方式。
+foreground 设置图形模式下的前景色。
+fstest 切换文件系统的试验模式。
+geometry 输出驱动器的相关信息。
+gfxmenu 使用 FILE 中的图形菜单。
+goto 跳转到指定标签执行，语法与MS-DOS中 goto 语法几乎相同。
+graphicsmode 改变图形模式，默认的是640x480模式，可改800x600模式。
+halt 关闭系统。
+help 显示内部命令的帮助信息。
+hiddenflag 分区隐藏标记。
+hiddenmenu 隐藏菜单。
+hide 通过在分区类型上置隐藏标志，隐藏指定分区。
+if 用于判断，同MS-DOS下的if。
+initrd 加载Linux格式的初始化虚拟盘, 并设置必要的参数。
+insmod 加载外部命令至内存，无需再读取源文件。
+is64bit 检测CPU 64位支持。
+kernel 尝试载入主引导影像文件。
+lock 如果用户未被认证，则终止命令的执行。
+ls 列表文件或目录。
+makeactive 将 root 设备置为活动分区。
+map 对设备进行映射。
+md5crypt 产生一个 MD5 格式的密码。
+module 对多重启动影像, 加载启动模块文件 (不处理该文件的内容, 用户必须自己确定核心的要求)。
+modulenounzip 与 'module' 类似, 但是自动禁用了解压缩。
+outline 图形模式下为了避免字符被背景图片淹没，给字符加上轮廓，使字符容易与背景区分。
+pager 没有参数时，切换满屏暂停显示方式。
+partnew 创建一个新的主分区。
+parttype 改变指定分区(PART)的分区类型(TYPE)。
+password 设置密码。
+pause 暂停命令的运行，并给出一段信息。任意键按下后，将继续。
+pxe pxe设备命令。
+quit 从grub4dos退回到DOS。只有从DOS执行grub.exe进入grub 环境时才能使用该命令。
+read 从内存的指定位置读取一个 32-bit 的值，并以十六进制形式显示出来。
+reboot 重启系统。
+root 设置根分区。
+rootnoverify 类似'root'指令, 但不测试该分区文件格式是否被支持。
+savedefault 将当前项设置为默认的引导项。
+serial 初始化一个串口设备。
+set 设定变量。
+setkey 改变键盘映射关系。
+setvbe 在系统核心运行前被用来改变视频模式。
+splashimage 图形模式下载入背景图片文件。
+terminal 选择一个终端。
+terminfo 指定终端的功能。
+testvbe 测试所指定(MODE)的 VBE 模式。
+timeout 设置在自动启动缺省菜单前所等待的秒数。
+title 命名菜单项。
+tpm 初始化TPM（可信赖平台模块）的缓存。
+unhide 通过清除隐藏标志，解除指定分区(PARTITION)的隐藏。
+uuid 显示设备的 uuid 号。
+vbeprobe 侦测 VBE 的信息。
+write 将字符串写入设备或文件中。
